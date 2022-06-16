@@ -2,12 +2,6 @@
   /**
    * Let's make a calculator 🧮
    */
-  console.log(calculate2("add", 1, 3)); // 4
-  console.log(calculate2("substract", 3, 1)); // 2
-  console.log(calculate2("multiply", 4, 2)); // 8
-  console.log(calculate2("divide", 4, 2)); // 2
-  console.log(calculate2("remainder", 5, 2)); // 1
-
   // My solution 😭
   type Command1 = "add" | "substract" | "multiply" | "divide" | "remainder";
   function calculate1(command: Command1, ...num: number[]): number {
@@ -44,4 +38,10 @@
         throw Error("unkown command");
     }
   }
+
+  console.log(calculate2("add", 1, 3)); // 4
+  console.log(calculate2("substract", 3, 1)); // 2
+  console.log(calculate2("multiply", 4, 2)); // 8
+  console.log(calculate2("divide", 4, 2)); // 2
+  console.log(calculate2("remainder", 5, 2)); // 1
 }

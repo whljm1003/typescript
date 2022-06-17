@@ -39,4 +39,30 @@
 
   const maker = CoffeeMaker.makeMachine(32);
   maker.fillCoffeeBeans(32);
+
+  // Getter와 Setter
+  class User {
+    // get을 사용하면 fullName에 접근할 때마다 새로운 데이터를 만들고 개선할 수 있다.
+    // 주로 어떠한 계산을 해야할 때 사용 가능함.
+    // 작성할땐 함수형태지만, 접근할 때는 변수에 접근하는 것 처럼 접근해야 됨
+    get fullName(): string {
+      return `${this.firstName} ${this.lastName}`;
+    }
+    private internalAge = 4;
+    get age(): number {
+      return this.internalAge;
+    }
+    set age(num: number) {
+      if (num < 0) {
+        throw new Error("value for beans should be greater than 0");
+      }
+      this.internalAge = num;
+    }
+    // private,public 키워드를 사용하면 따로 멤버 변수 작성없이 자동적으로 만들어짐
+    constructor(private firstName: string, private lastName: string) {}
+  }
+  const user = new User("Steve", "Jobs");
+  user.age = 6;
+  console.log(user.fullName);
+  console.log(user.age);
 }

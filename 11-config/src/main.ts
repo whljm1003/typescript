@@ -1,3 +1,16 @@
+"use strict";
+class Car {
+  engine = 0;
+  move() {
+    const engine = this.engine + 1;
+    console.log("engine🐕");
+    console.log(engine);
+  }
+}
+
+const car = new Car();
+car.move();
+
 // tsc logging.ts -w -> 한 파일 컴파일.
 // tsc --init -> tsconfig.json 생김.
 // tsc -w -> tsconfig의 모든 typescript 파일을 javascript 파일로 컴파일 해줌.
@@ -27,5 +40,3 @@
  * importHelpers -> 이터러블 문제 발생 시 해결 (요즘은 잘 사용안함)
  * isolatedModules -> 각각의 파일을 다른 모듈로 만들어줌
  *  */
-
-console.log("hahahaha!!!");

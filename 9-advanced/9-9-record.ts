@@ -14,4 +14,7 @@
     about: { title: "About" },
     contack: { title: "Contack" },
   };
+
+  type Product = "cat" | "dog";
+  type NewProduct = Capitalize<Product>; // "Cat" | "Dog"
 }

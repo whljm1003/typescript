@@ -1,5 +1,6 @@
 {
   // Pick = 기존의 타입에서 원하는 속성과 값만 뽑아서 사용 가능함.
+  // type Pick<T, K extends keyof T> = { [P in K]: T[P] };
 
   type Video = {
     id: string;
